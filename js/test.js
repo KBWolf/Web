@@ -64,7 +64,7 @@ firebase.initializeApp(firebaseConfig);
   var canhbao2 = document.getElementById("canhbao2")
   var nd = document.getElementById('nd')
   
-  var modal = document.getElementById('modal_ecall');
+  var modal1 = document.getElementById('modal_ecall1');
     var btn2= document.getElementById('bnt2');
     btn2.onclick = function() {
           modal.style.display = "none";
@@ -91,12 +91,12 @@ firebase.initializeApp(firebaseConfig);
       
         } else {
           // No user is signed in.
-          modal.style.display="block"
+          modal1.style.display="block"
           document.getElementById("canhbao").style.display="none"
           document.getElementById("name_p").style.display="none"
           document.getElementById("st").style.display="none"
           document.getElementById("nd").innerHTML="Dường như bạn chưa đăng nhập! Hãy đăng nhập để tiếp tục"
-          btn2.style.display="none"
+          
       
         }
       });
@@ -168,14 +168,14 @@ firebase.initializeApp(firebaseConfig);
        g.innerHTML="OK";
       }
       else{
-        g.innerHTML="<span style='color: red;'>Wr</span>"
+        //f.innerHTML="<span style='color: red;'>Wr</span>"
         g.innerHTML="<span style='color: red;'>Wr</span>"
         name_p.innerHTML="<span style='color: red;'>101<span>"
         st.innerHTML="<span style='color:#0093E9;'> phát hiện khí gas<span>"
         canhbao2.style.display="none"
         nd.style.display="none"
         btn2.style.display="block"
-        bnt1.style.display="none"
+      
   
         modal.style.display='block';
   
@@ -190,7 +190,7 @@ firebase.initializeApp(firebaseConfig);
       }
       else{
         f.innerHTML="<span style='color: red;'>Wr</span>"
-        g.innerHTML="<span style='color: red;'>Wr</span>"
+        
         name_p.innerHTML="<span style='color: red;'>101<span>"
         st.innerHTML="<span style='color:#0093E9;'> phát hiện lửa<span>"
   
@@ -199,8 +199,8 @@ firebase.initializeApp(firebaseConfig);
         canhbao2.style.display="none"
         nd.style.display="none"
         btn2.style.display="block"
-        bnt1.style.display="none"
-  
+     
+
       }
       console.log(readf);
         });
@@ -221,7 +221,7 @@ firebase.initializeApp(firebaseConfig);
         }
         else{
           g202.innerHTML="<span style='color: red;'>Wr</span>"
-          g.innerHTML="<span style='color: red;'>Wr</span>"
+          
           name_p.innerHTML="<span style='color: red;'>202<span>"
           st.innerHTML="<span style='color:#0093E9;'> phát hiện khí gas<span>"
     
@@ -230,7 +230,8 @@ firebase.initializeApp(firebaseConfig);
           canhbao2.style.display="none"
           nd.style.display="none"
           btn2.style.display="block"
-          bnt1.style.display="none"
+       
+          
     
         }
         console.log(readg202);
@@ -243,7 +244,7 @@ firebase.initializeApp(firebaseConfig);
         }
         else{
           f202.innerHTML="<span style='color: red;'>Wr</span>"
-          g.innerHTML="<span style='color: red;'>Wr</span>"
+          
           name_p.innerHTML="<span style='color: red;'>202<span>"
           st.innerHTML="<span style='color:#0093E9;'> phát hiện lửa<span>"
     
@@ -251,7 +252,7 @@ firebase.initializeApp(firebaseConfig);
           canhbao2.style.display="none"
           nd.style.display="none"
           btn2.style.display="block"
-          bnt1.style.display="none"
+          
     
         }
         console.log(readf202);
@@ -262,7 +263,7 @@ readh303.on('value',function(readh303){
   console.log(readh303);
   });
   readt303.on('value',function(readt303){
-    t303.innerHTML=readt303.val();
+    t303.innerHTML=Math.ceil(readt303.val());
     console.log(readt303);
     });
     readg303.on('value',function(readg303){
@@ -271,7 +272,7 @@ readh303.on('value',function(readh303){
     }
     else{
       g303.innerHTML="<span style='color: red;'>Wr</span>"
-      g.innerHTML="<span style='color: red;'>Wr</span>"
+     
       name_p.innerHTML="<span style='color: red;'>303<span>"
       st.innerHTML="<span style='color:#0093E9;'> phát hiện khí gas<span>"
 
@@ -280,7 +281,8 @@ readh303.on('value',function(readh303){
       canhbao2.style.display="none"
       nd.style.display="none"
       btn2.style.display="block"
-      bnt1.style.display="none"
+     
+
 
     }
     console.log(readg);
@@ -293,7 +295,7 @@ readh303.on('value',function(readh303){
     }
     else{
       f303.innerHTML="<span style='color: red;'>Wr</span>"
-      g.innerHTML="<span style='color: red;'>Wr</span>"
+      
       name_p.innerHTML="<span style='color: red;'>303<span>"
       st.innerHTML="<span style='color:#0093E9;'> phát hiện lửa<span>"
 
@@ -301,8 +303,8 @@ readh303.on('value',function(readh303){
       canhbao2.style.display="none"
       nd.style.display="none"
       btn2.style.display="block"
-      bnt1.style.display="none"
-
+     
+      
     }
     console.log(readf303);
       });
@@ -321,7 +323,7 @@ readh303.on('value',function(readh303){
     }
     else{
       g404.innerHTML="<span style='color: red;'>Wr</span>"
-      g.innerHTML="<span style='color: red;'>Wr</span>"
+      
       name_p.innerHTML="<span style='color: red;'>404<span>"
       st.innerHTML="<span style='color:#0093E9;'> phát hiện khí gas<span>"
 
@@ -330,7 +332,7 @@ readh303.on('value',function(readh303){
       canhbao2.style.display="none"
       nd.style.display="none"
       btn2.style.display="block"
-      bnt1.style.display="none"
+     
 
     }
     console.log(readg404);
@@ -343,7 +345,7 @@ readh303.on('value',function(readh303){
     }
     else{
       f404.innerHTML="<span style='color: red;'>Wr</span>"
-      g.innerHTML="<span style='color: red;'>Wr</span>"
+      
       name_p.innerHTML="<span style='color: red;'>404<span>"
       st.innerHTML="<span style='color:#0093E9;'> phát hiện lửa<span>"
 
@@ -352,7 +354,8 @@ readh303.on('value',function(readh303){
       canhbao2.style.display="none"
       nd.style.display="none"
       btn2.style.display="block"
-      bnt1.style.display="none"
+      
+
 
     }
     console.log(readf404);
